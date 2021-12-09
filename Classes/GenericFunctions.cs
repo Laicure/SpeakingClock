@@ -18,5 +18,16 @@ namespace SpeakingClock.Classes
                 }
             }
         }
+
+        internal static void Misc_LoadComboBoxData(ComboBox cmb, string[] cblist)
+        {
+            {
+                cmb.BeginUpdate();
+                cmb.Items.Clear();
+                cmb.Items.AddRange(cblist);
+                cmb.EndUpdate();
+                if (cblist.Length > 0) cmb.SelectedIndex = 0;
+            }
+        }
     }
 }
