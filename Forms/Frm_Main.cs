@@ -48,10 +48,8 @@ namespace SpeakingClock.Forms
             using (SpeechSynthesizer synth = new SpeechSynthesizer())
             {
                 synth.SetOutputToDefaultAudioDevice();
-                synth.SelectVoice("Microsoft Zira Desktop");                
+                synth.SelectVoice("Microsoft Zira Desktop");
                 synth.Speak("It's now " + DateTime.Now.ToString("hh:mm tt", GlobalVariables.cul_invar));
-
-                
             }
         }
 
@@ -61,8 +59,7 @@ namespace SpeakingClock.Forms
 
             using (SpeechSynthesizer synth = new SpeechSynthesizer())
             {
-
-                // Output information about all of the installed voices.   
+                // Output information about all of the installed voices.
                 Console.WriteLine("Installed voices -");
                 foreach (InstalledVoice voice in synth.GetInstalledVoices())
                 {
