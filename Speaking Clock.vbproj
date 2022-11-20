@@ -49,6 +49,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\art.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -81,6 +84,13 @@
     <Compile Include="Forms\Frm_Main.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\Frm_Settings.Designer.vb">
+      <DependentUpon>Frm_Settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Settings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Mod_Global.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -102,6 +112,9 @@
     <EmbeddedResource Include="Forms\Frm_Main.resx">
       <DependentUpon>Frm_Main.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Settings.resx">
+      <DependentUpon>Frm_Settings.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -122,7 +135,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Modules\" />
+    <None Include="Resources\art.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
